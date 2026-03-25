@@ -1,11 +1,12 @@
-import Dialogs from './dialogs.js';
+import ScreenManager from './ScreenManager.js';
+import DialogManager from './DialogManager.js';
 
 export default class UIManager {
     constructor() {
-        this.dialogManager = new Dialogs();
-        this.btnHowToPlay = document.querySelector('#btn-how-to-play');
+        this.screenManager = new ScreenManager();
+        this.dialogManager = new DialogManager();
 
-        this.btnHowToPlay.addEventListener('click', () => {
+        this.screenManager.titleScreen.btnHowToPlay.addEventListener('click', () => {
             this.dialogManager.dlgHowToPlay.openDialog();
         })
     }
