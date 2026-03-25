@@ -8,6 +8,9 @@ export default class ScreenManager {
         this.screens = document.querySelectorAll('.screen');
 
         this.titleScreen.btnPlay.addEventListener('click', () => {
+            this.gameplayScreen.clear();
+            this.gameplayScreen.grid.reset();
+            this.gameplayScreen.render();
             this.switch('screen-gameplay');
         })
 
