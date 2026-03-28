@@ -13,7 +13,13 @@ export default class ScreenManager {
             this.switch('screen-game-setup');
         })
 
-        this.gameSetupScreen.btnStart.addEventListener('click', () => {
+        this.gameSetupScreen.btnBack.addEventListener('click', () => {
+            this.switch('screen-title');
+        })
+
+        this.gameSetupScreen.settingsForm.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+            
             this.gameplayScreen.clearGrids();
             this.gameplayScreen.renderGrids();
             this.switch('screen-gameplay');

@@ -81,6 +81,12 @@ h1.game-title {
     left: 20px;
 }
 
+#screen-game-setup .how-to-play-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 #screen-game-setup .start-button-container {
     position: absolute;
     bottom: 20px;
@@ -95,4 +101,20 @@ h1.game-title {
     padding: 0 20px;
     border: solid black 2px;
     box-sizing: border-box;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+#game-settings-container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+#game-settings-container .game-settings-option {
+    display: contents;
 }

@@ -9,7 +9,9 @@ export default class UIManager {
         this.screenManager.titleScreen.btnHowToPlay.addEventListener('click', () => {
             this.dialogManager.dlgHowToPlay.openDialog();
         })
-    }
 
-    
+        this.screenManager.gameSetupScreen.btnHowToPlay.addEventListener('click', () => {
+            this.dialogManager.dlgHowToPlay.openDialog();
+        })
+    }
 }

@@ -14,30 +14,82 @@
             <h1 class="game-title">Notakto</h1>
 
             <section class="selection">
-                <button id="btn-play">Play</button>
-                <button id="btn-how-to-play">How To Play</button>
+                <button class="btn-play">Play</button>
+                <button class="btn-how-to-play">How To Play</button>
             </section>
             
         </section>
 
         <section id="screen-game-setup" class="screen hidden">
             
-            <div id="screen-game-setup-settings-container">
+            <form id="screen-game-setup-settings-container">
                 
-                <div id="game-settings-row">
+                <div id="game-settings-container">
+                    <fieldset class="game-settings-option">
+                        <legend>Number of Players:</legend>
+
+                        <div class="controls">
+                            <button type="button">&lt;</button>
+                            <span>2</span>
+                            <button type="button">&gt;</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="game-settings-option">
+                        <legend>Number of Grids:</legend>
+
+                        <div class="controls">
+                            <button type="button">&lt;</button>
+                            <span>3</span>
+                            <button type="button">&gt;</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="game-settings-option">
+                        <legend>Number of Rounds:</legend>
+
+                        <div class="controls">
+                            <input type="number">
+                        </div>
+                    </fieldset>
+
+                    <label for="inp-player-turn-time-limit">Player Turn Time Limit:</label>
+                    <div class="controls">
+                        <input type="number" id="inp-player-turn-time-limit">
+                    </div>
+
+                    <label for="inp-game-time-limit">Game Time Limit:</label>
+                    <div class="controls">
+                        <input type="number" for="inp-game-time-limit">
+                        <input type="checkbox" id="checkbox-game-time-limit">
+                        <label for="checkbox-game-time-limit">No time limit</label>
+                    </div>
+
+                    <fieldset class="game-settings-option">
+                        <legend>Game Modes:</legend>
+
+                        <div class="controls">
+                            <input type="radio" id="radio-normal-game-mode" name="game-mode" value="Normal">
+                            <label for="radio-normal-game-mode">Normal</label>
+                            <input type="radio" id="radio-single-winner-game-mode" name="game-mode" value="Single Winner">
+                            <label for="radio-single-winner-game-mode">Single Winner</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="player-settings-container">
 
                 </div>
-                <div id="player-settings-row">
-
-                </div>
                 
-            </div>
+            </form>
 
             <div class="back-button-container">
-                <button class="btn-back">Back</button>
+                <button type="button" class="btn-back">Back</button>
+            </div>
+            <div class="how-to-play-button-container">
+                <button type="button" class="btn-how-to-play">How To Play</button>
             </div>
             <div class="start-button-container">
-                <button class="btn-start">Start</button>
+                <button type="submit" form="screen-game-setup-settings-container" class="btn-start">Start</button>
             </div>
         </section>
 
