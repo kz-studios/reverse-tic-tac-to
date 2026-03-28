@@ -70,3 +70,29 @@ h1.game-title {
     background: green;
     color: white;
 }
+
+#screen-game-setup {
+    position: relative;
+}
+
+#screen-game-setup .back-button-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#screen-game-setup .start-button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#screen-game-setup-settings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100dvw;
+    padding: 0 20px;
+    border: solid black 2px;
+    box-sizing: border-box;
+}
