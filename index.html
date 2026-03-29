@@ -49,21 +49,33 @@
                         <legend>Number of Rounds:</legend>
 
                         <div class="controls">
-                            <input type="number">
+                            <button type="button">&lt;</button>
+                            <span>3</span>
+                            <button type="button">&gt;</button>
                         </div>
                     </fieldset>
 
-                    <label for="inp-player-turn-time-limit">Player Turn Time Limit:</label>
-                    <div class="controls">
-                        <input type="number" id="inp-player-turn-time-limit">
-                    </div>
+                    <fieldset class="game-settings-option">
+                        <legend>Player Turn Time Limit:</legend>
 
-                    <label for="inp-game-time-limit">Game Time Limit:</label>
-                    <div class="controls">
-                        <input type="number" for="inp-game-time-limit">
-                        <input type="checkbox" id="checkbox-game-time-limit">
-                        <label for="checkbox-game-time-limit">No time limit</label>
-                    </div>
+                        <div class="controls">
+                            <button type="button">&lt;</button>
+                            <span>10sec</span>
+                            <button type="button">&gt;</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="game-settings-option">
+                        <legend>Game Time Limit:</legend>
+
+                        <div class="controls">
+                            <button type="button">&lt;</button>
+                            <span>300sec</span>
+                            <button type="button">&gt;</button>
+                            <input type="checkbox" id="checkbox-game-time-limit">
+                            <label for="checkbox-game-time-limit">No time limit</label>
+                        </div>
+                    </fieldset>
 
                     <fieldset class="game-settings-option">
                         <legend>Game Modes:</legend>
