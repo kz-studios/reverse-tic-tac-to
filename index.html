@@ -25,62 +25,62 @@
             <form id="screen-game-setup-settings-container">
                 
                 <div id="game-settings-container">
-                    <fieldset class="game-settings-option">
+                    <fieldset id="number-of-players-option-fieldset" class="game-settings-option">
                         <legend>Number of Players:</legend>
 
-                        <div class="controls">
-                            <button type="button">&lt;</button>
+                        <div class="controls" data-setting="numOfPlayers" data-step="1" data-min="2" data-max="5">
+                            <button type="button" class="btn-decrease">&lt;</button>
                             <span>2</span>
-                            <button type="button">&gt;</button>
+                            <button type="button" class="btn-increase">&gt;</button>
                         </div>
                     </fieldset>
 
-                    <fieldset class="game-settings-option">
+                    <fieldset id="number-of-grids-option-fieldset" class="game-settings-option">
                         <legend>Number of Grids:</legend>
 
-                        <div class="controls">
-                            <button type="button">&lt;</button>
+                        <div class="controls" data-setting="numOfGrids" data-step="1" data-min="2" data-max="5">
+                            <button type="button" class="btn-decrease">&lt;</button>
                             <span>3</span>
-                            <button type="button">&gt;</button>
+                            <button type="button" class="btn-increase">&gt;</button>
                         </div>
                     </fieldset>
 
-                    <fieldset class="game-settings-option">
+                    <fieldset id="number-of-rounds-option-fieldset" class="game-settings-option">
                         <legend>Number of Rounds:</legend>
 
-                        <div class="controls">
-                            <button type="button">&lt;</button>
+                        <div class="controls" data-setting="numOfRounds" data-step="1" data-min="1" data-max="5">
+                            <button type="button" class="btn-decrease">&lt;</button>
                             <span>3</span>
-                            <button type="button">&gt;</button>
+                            <button type="button" class="btn-increase">&gt;</button>
                         </div>
                     </fieldset>
 
-                    <fieldset class="game-settings-option">
+                    <fieldset id="player-turn-time-limit-option-fieldset" class="game-settings-option">
                         <legend>Player Turn Time Limit:</legend>
 
-                        <div class="controls">
-                            <button type="button">&lt;</button>
+                        <div class="controls" data-setting="playerTurnTimeLimit" data-step="1" data-min="3" data-max="10">
+                            <button type="button" class="btn-decrease">&lt;</button>
                             <span>10sec</span>
-                            <button type="button">&gt;</button>
+                            <button type="button" class="btn-increase">&gt;</button>
                         </div>
                     </fieldset>
 
-                    <fieldset class="game-settings-option">
+                    <fieldset id="game-time-limit-option-fieldset" class="game-settings-option">
                         <legend>Game Time Limit:</legend>
 
-                        <div class="controls">
-                            <button type="button">&lt;</button>
+                        <div class="controls" data-setting="gameTimeLimit" data-step="30" data-min="30" data-max="300">
+                            <button type="button" class="btn-decrease">&lt;</button>
                             <span>300sec</span>
-                            <button type="button">&gt;</button>
+                            <button type="button" class="btn-increase">&gt;</button>
                             <input type="checkbox" id="checkbox-game-time-limit">
                             <label for="checkbox-game-time-limit">No time limit</label>
                         </div>
                     </fieldset>
 
-                    <fieldset class="game-settings-option">
+                    <fieldset id="game-modes-option-fieldset" class="game-settings-option">
                         <legend>Game Modes:</legend>
 
-                        <div class="controls">
+                        <div class="controls" data-setting="gameMode">
                             <input type="radio" id="radio-normal-game-mode" name="game-mode" value="Normal">
                             <label for="radio-normal-game-mode">Normal</label>
                             <input type="radio" id="radio-single-winner-game-mode" name="game-mode" value="Single Winner">

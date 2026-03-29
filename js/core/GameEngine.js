@@ -1,4 +1,4 @@
-export default class GameEngine {
+class GameEngine {
     constructor() {
         this.killingMasks = [
             0b000000111,
@@ -19,3 +19,6 @@ export default class GameEngine {
         return false;
     }
 }
+
+const instance = new GameEngine();
+export default instance;

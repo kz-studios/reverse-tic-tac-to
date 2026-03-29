@@ -1,18 +1,17 @@
+import gameEngine from "../../core/GameEngine.js";
+import gameConfig from '../../core/GameConfig.js'
 import Grid from "../../core/Grid.js";
-import GameEngine from "../../core/GameEngine.js";
 
 export default class GameplayScreen {
     constructor() {
-        this.numOfGrids = 5;
         this.grids = [];
         this.screen = document.querySelector('#screen-gameplay');
         this.gridContainer = this.screen.querySelector('#grid-container');
-
-        this.gameEngine = new GameEngine();
     }
 
     renderGrids() {
-        for (let i = 1; i <= this.numOfGrids; i++) {
+        const currentNumOfGrids = gameConfig.numOfGrids;
+        for (let i = 1; i <= currentNumOfGrids; i++) {
             this.grids.push(new Grid(i));
             const gridElement = document.createElement('div');
             gridElement.id = `grid-${i}`;
@@ -33,7 +32,7 @@ export default class GameplayScreen {
                     console.log(`Clicked grid-${currentGrid.id}: row ${row}, column ${col}`);
                     console.log(`Grid state: ${currentGrid.gridState.toString(2).padStart(9, '0')}`)
 
-                    if (this.gameEngine.doesGridHaveThreeXInARow(currentGrid.gridState)) {
+                    if (gameEngine.doesGridHaveThreeXInARow(currentGrid.gridState)) {
                         currentGrid.killGrid(gridElement); 
                         gridElement.classList.add('dead');
                         console.log(`Grid-${currentGrid.id} dead`)
